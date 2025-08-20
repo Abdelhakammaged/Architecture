@@ -5,7 +5,7 @@ import Searchicon from "../../assets/icons/searchicon";
 import logo from "../../assets/imgs/Group 1154.png";
 import Discover from "../../assets/imgs/Title - Transparent TXT image (1).png";
 import image2 from "../../assets/imgs/jan-antonin-kolar-1683252-unsplash_bw_compressed.png";
-import image3 from "../../assets/imgS/modern-essentials-790188-unsplash_bw_compressed.png";
+import image3 from "../../assets/imgs/modern-essentials-790188-unsplash_bw_compressed.png";
 
 export default function Component() {
   const backgrounds = [
