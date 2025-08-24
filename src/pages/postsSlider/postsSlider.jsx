@@ -6,6 +6,11 @@ import { BiChevronRight } from "react-icons/bi";
 import image1 from "../../assets/imgs/jan-antonin-kolar-1683252-unsplash_bw_compressed.png";
 import image2 from "../../assets/imgs/modern-essentials-790188-unsplash_bw_compressed.png";
 import image3 from "../../assets/imgs/image3.png";
+import { useState } from "react";
+import { BsArrowRight } from "react-icons/bs";
+import { RiMvAiLine } from "react-icons/ri";
+import { MdMail } from "react-icons/md";
+
 const blogPosts = [
   {
     id: 1,
@@ -60,6 +65,13 @@ const blogPosts = [
 ];
 
 export default function PostsSlider() {
+  const [email, setEmail] = useState("");
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    // Handle form submission here
+    console.log("Email submitted:", email);
+  };
   return (
     <div className="w-full max-w-7xl mx-auto px-4 py-8">
       {/* Header */}
@@ -67,7 +79,6 @@ export default function PostsSlider() {
         <h2 className="text-sm font-medium tracking-wider text-gray-900 uppercase">
           ALL POSTS
         </h2>
-        <BiChevronRight className="w-5 h-5 text-gray-400" />
       </div>
 
       {/* Posts Slider */}
@@ -125,6 +136,79 @@ export default function PostsSlider() {
           </SwiperSlide>
         ))}
       </Swiper>
+
+      <div className=" bg-white flex flex-col items-center justify-center px-4 relative">
+        <div className="w-full max-w-md space-y-8">
+          {/* Main heading */}
+          <div className="text-center space-y-2">
+            <h1 className="text-2xl font-normal text-gray-900 tracking-wide">
+              JOIN THE VIP List
+            </h1>
+            <p className="text-gray-500 text-sm">
+              Sign up to get exclusive content stright into your email!
+            </p>
+          </div>
+
+          {/* Email form */}
+          <form onSubmit={handleSubmit} className="relative">
+            <div className="relative flex items-center">
+              <MdMail className="absolute left-4 h-5 w-5 " />
+              <input
+                type="email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                placeholder="email@website.com"
+                className="w-full pl-12 pr-12 py-3 border-b-2  bg-transparent text-gray-900 placeholder-gray-400 focus:outline-none focus:border-gray-600 transition-colors"
+                required
+              />
+              <button
+                type="submit"
+                className="absolute right-2 p-2  hover:text-gray-900 transition-colors"
+              >
+                <BiChevronRight className="h-8 w-8" />
+              </button>
+            </div>
+          </form>
+        </div>
+
+        {/* Footer navigation */}
+        <div className="absolute bottom-[-40px] flex space-x-8">
+          <a
+            href="#"
+            className="text-gray-400 hover:text-gray-600 text-sm transition-colors"
+          >
+            work
+          </a>
+          <a
+            href="#"
+            className="text-gray-400 hover:text-gray-600 text-sm transition-colors"
+          >
+            blog
+          </a>
+          <a
+            href="#"
+            className="text-gray-400 hover:text-gray-600 text-sm transition-colors"
+          >
+            about
+          </a>
+        </div>
+
+        {/* Copyright */}
+        <div className="absolute bottom-[-70px]">
+          <p className="text-gray-400 text-xs">
+            Copyright ©{" "}
+            <a
+              href="https://www.gadaou.ai/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-blue-500 cursor-pointer transition-colors"
+            >
+              Gadaou.AI
+            </a>{" "}
+            All rights reserved.
+          </p>
+        </div>
+      </div>
     </div>
   );
 }

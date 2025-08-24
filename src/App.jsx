@@ -11,21 +11,21 @@ import CabinetSection from "./pages/cabinetSection/cabinetSection";
 import BeforeAfterSection from "./pages/BeforeAfterSection/BeforeAfterSection";
 import PostsSlider from "./pages/postsSlider/postsSlider";
 import ArchentWestGroup from "./pages/ARCHENTWESTGROUP/archentWestGroup";
+import ProcessFlow from "./pages/ProcessFlow/ProcessFlow";
+import { ArchitecturalTimeline } from "./pages/ArchitecturalTimeline/ArchitecturalTimeline";
 function App() {
   return (
     <>
       <Header />
       <div className="h-[100px]"></div>
       <ArchentWestGroup />
+      <div className="h-[100px]"></div>
 
-      <div>
-        <img src={ProcessStep} alt="img" />
-      </div>
+      <ProcessFlow />
       <div className="h-[100px]"></div>
       <PortfolioSection />
       <div className="h-[100px]"></div>
 
-      <PostsSlider />
       <InteriorSolutions />
 
       <CabinetSection />
@@ -34,6 +34,7 @@ function App() {
       <ProjectHighlightSection />
 
       <TestimonialsSection />
+      <ArchitecturalTimeline />
 
       <ImageGridSection />
       <div className="h-[100px]"></div>
@@ -47,6 +48,10 @@ function App() {
         beforeLabel="Before Renovation"
         afterLabel="After Renovation"
       />
+      <div className="h-[100px]"></div>
+
+      <PostsSlider />
+      <div className="h-[100px]"></div>
     </>
   );
 }
