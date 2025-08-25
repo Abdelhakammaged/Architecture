@@ -42,7 +42,7 @@ export default function Component() {
           <div className="me-10">
             <BarIcon />
           </div>
-          <a href="#">Dome</a>
+          <a href="#Dome">Dome</a>
           <span>/</span>
           <a href="#">About</a>
           <span>/</span>

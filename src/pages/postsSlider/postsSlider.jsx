@@ -194,9 +194,9 @@ export default function PostsSlider() {
         </div>
 
         {/* Copyright */}
-        <div className="absolute bottom-[-70px]">
-          <p className="text-gray-400 text-xs">
-            Copyright ©{" "}
+        <div className="absolute bottom-[-100px]">
+          <p className="text-gray-400 text-md">
+            ©2025.Architects Developed By{" "}
             <a
               href="https://www.gadaou.ai/"
               target="_blank"
@@ -205,7 +205,6 @@ export default function PostsSlider() {
             >
               Gadaou.AI
             </a>{" "}
-            All rights reserved.
           </p>
         </div>
       </div>

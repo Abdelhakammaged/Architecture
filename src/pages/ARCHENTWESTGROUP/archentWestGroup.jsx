@@ -10,7 +10,7 @@ import Bitmap7 from "../../assets/imgs/Bitimage4.png";
 
 export default function ArchentWestGroup() {
   return (
-    <div className="w-[95%] md:w-[86%] bg-white m-auto">
+    <div className="w-[95%] md:w-[86%] bg-white m-auto" id="Dome">
       {/* Top Section */}
       <div className="flex flex-col lg:flex-row  justify-center min-h-screen bg-white gap-10 lg:gap-24">
         {/* Left Column */}
